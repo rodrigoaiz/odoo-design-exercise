@@ -9,62 +9,77 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="#">Products</a>
-          <a class="nav-link" href="#">Pages</a>
-          <a class="nav-link" href="#">App</a>
-          <a class="nav-link" href="#">Docs</a>
-          Sign in
-          Buy now
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container border-bottom">
+        <a class="navbar-brand" href="#"><img class="d-block" src="./img/odoo-white.svg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">Pages</a>
+            <a class="nav-link" href="#">App</a>
+            <a class="nav-link" href="#">Docs</a>
+            Sign in
+            Buy now
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
     <section class="hero">
-      <aside class="hero__aside">
-        <h1 class="hero__h1">Development done right</h1>
-        <p>Build a beautiful, modern website with flexible components built from scratch.</p>
-        <button class="hero__button btn">Get started</button>
-        <div>
-          Trusted by:
-          <img src="./img/google-white.svg" alt="">
-          <img src="./img/spotify.svg" alt="">
-          <img src="./img/airbnb.svg" alt="">
-          <img src="./img/paypal.svg" alt="">
-        </div>
-      </aside>
-      <article>
-        <header>
-          Manage cards
-          Add new
-        </header>
-        Active
-        CARD NUMBER
-        4358
-        7421
-        9256
-        6682
-        NAME
-        John Snow
-        EXPIRY DATE
-        11/23
-        Starbucks
-        $5,50 USD
-        Pending - San Francisco, United States
-        Nike Sports
-        $129,00 USD
-        Pending - Lisbon, Portugal
-        View all
-      </article>
+      <div class="container hero__wrapper">
+        <aside class="hero__aside">
+          <h1 class="hero__aside__h1">Development done right</h1>
+          <p>Build a beautiful, modern website with flexible components built from scratch.</p>
+          <button class="hero__aside__button btn">Get started</button>
+          <div class="hero__trusted d-flex justify-content-arround">
+            Trusted by:
+            <img class="hero__trusted__img" src="./img/google-white.svg" alt="">
+            <img class="hero__trusted__img" src="./img/spotify.svg" alt="">
+            <img class="hero__trusted__img" src="./img/airbnb.svg" alt="">
+            <img class="hero__trusted__img" src="./img/paypal.svg" alt="">
+          </div>
+        </aside>
+        <article class="hero__article bg-indigo">
+          <header class="hero__article__header">
+            Manage cards
+            <button class="hero__article__button btn">Add new</button>
+          </header>
+          <div class="hero__creditcard">
+            <header>
+              logo
+              Active
+            </header>
+            <div class="hero__creditcard__numer">
+              CARD NUMBER
+              4358
+              7421
+              9256
+              6682
+            </div>
+            <div class="hero__cereditcard__info">
+              NAME
+              John Snow
+              EXPIRY DATE
+              11/23
+            </div>
+          </div>
+          <footer class="hero__creditcard__footer">
+            Starbucks
+            $5,50 USD
+            Pending - San Francisco, United States
+            Nike Sports
+            $129,00 USD
+            Pending - Lisbon, Portugal
+            View all
+          </footer>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -139,37 +154,58 @@
   I want to start a new project.
   Buy now
   Learn more
-  Brilliant solutions for your ideas
-  Modern-looking websites.
-  Documentation
-  Purchase now
+
+  <footer class="footer">
+    <header class="footer__header">
+      <div class="row">
+        <div class="col-6">
+          Brilliant solutions for your ideas
+          Modern-looking websites.
+
+        </div>
+        <div class="col-6">
+          <buttom class="footer__buttom">Documentation</buttom>
+          <buttom class="footer__buttom">Purchase now</buttom>
+        </div>
+      </div>
+    </header>
+    <div class="footer__content">
+      <div class="footer__content__column">
+        <h3 class="footer__content__column__h3">About</h3>
+        <a class="footer__content__column__a" href="#">Services</a>
+        <a class="footer__content__column__a" href="#">Pricing</a>
+        <a class="footer__content__column__a" href="#">Contact</a>
+        <a class="footer__content__column__a" href="#">Careers</a>
+      </div>
+      <div class="footer__content__column">
+        <h3 class="footer__content__column__h3">Company</h3>
+        <a class="footer__content__column__a" href="#">Community</a>
+        <a class="footer__content__column__a" href="#">Help center</a>
+        <a class="footer__content__column__a" href="#">Support</a>
+      </div>
+      <div class="footer__content__column">
+        <h3 class="footer__content__column__h3">Account</h3>
+        <a class="footer__content__column__a" href="#">Profile</a>
+        <a class="footer__content__column__a" href="#">Settings</a>
+        <a class="footer__content__column__a" href="#">Billing</a>
+        <a class="footer__content__column__a" href="#">Notifications</a>
+      </div>
+    <div class="footer__legal">
+      Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for
+      having a quick and solid start in most web projects.
 
 
-  Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for
-  having a quick and solid start in most web projects.
 
-  Account
-  ● Profile
-  ● Settings
-  ● Billing
-  ● Notifications
+      © Odoo. All rights reserved
 
-  About
-  ● Services
-  ● Pricing
-  ● Contact
-  ● Careers
+      ● Terms
+      ● Privacy
+      ● Cookies
 
-  Company
-  ● Community
-  ● Help center
-  ● Support
+    </div>
+  </footer>
 
-  © Odoo. All rights reserved
 
-  ● Terms
-  ● Privacy
-  ● Cookies
 
   <script type="module" src="./js/main.js"></script>
 </body>

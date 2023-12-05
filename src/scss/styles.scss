@@ -1,1 +1,48 @@
 @import "~bootstrap/scss/bootstrap";
+@import "colors.scss";
+.navbar-brand{
+  img{
+    width: 5rem;
+    background-color: red;
+  }
+}
+.nav-link:link, .nav-link:visited{
+  color: $white;
+}
+.hero{
+  background-color: $primary;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  &__wrapper{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    & > *{
+      width: 50%;
+    }
+  }
+  &__trusted{
+    &__img{
+      width: 6rem;
+      margin: 0 1rem;
+      background-color: red;
+    }
+  }
+  h1{
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+  }
+  p{
+      font-size: 1.5rem;
+      font-weight: 300;
+  }
+}
+.footer{
+  background-color: $indigo;
+}
