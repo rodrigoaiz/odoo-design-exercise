@@ -1,71 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+$tipo__titulos: 'Roboto', sans-serif;
+$tipo__textos: 'Roboto', sans-serif;
 @import "~bootstrap/scss/bootstrap";
 @import "colors.scss";
+@import "mixins.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
+:root, body{
+  --font-family-sans-serif:'Roboto', sans-serif;
+  --link-color: $white;
+  --size-sm: clamp(0.7rem, 0.32vw + 0.64rem, 0.89rem);
+  --size-base: clamp(0.88rem, 0.52vw + 0.77rem, 1.19rem);
+  --size-lg: clamp(1.09rem, 0.82vw + 0.93rem, 1.58rem);
+  --size-xl: clamp(1.37rem, 1.24vw + 1.12rem, 2.11rem);
+  --size-xxl: clamp(1.71rem, 1.84vw + 1.34rem, 2.81rem);
+  --size-xxxl: clamp(2.14rem, 2.69vw + 1.6rem, 3.75rem);
+  --line-height-base: clamp(1.3rem, 0.52vw + 1.57rem, 2.38rem);
+  --line-height-md: clamp(1.5rem, 0.82vw + 1.7rem, 2.52rem);
+  --line-height-xl: clamp(2rem, 1.52vw + 2.12rem, 4.02rem);
+  --transition-base: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+/* ---------------------------------------------------------------------------- */
+/*Navbar section*/
+/* ---------------------------------------------------------------------------- */
 .navbar{
   background-color: $blue;
-  bottom{
-    background-color: $yellow;
-    border: none;
-    &:hover{
-      background-color: $green;
+  padding-top: 2rem;
+  &-collapse{
+    @include mediadelante(992px){
+      flex-grow: 0;
     }
   }
-  & .border-bottom{
-    border-bottom: 0.5rem solid $blue;
+  &-border{
+    @include flex(flex, row, wrap, center, center);
+    border-bottom: 1px solid $white;
+    padding-bottom: 2rem;
+  }
+  &__login{
+    @include flex(flex, row, wrap, center, space-around);
+    @include media(992px){
+      @include flex(flex, row, wrap, center, center);
+      width: 100%;
+      flex-grow: 1;
+    }
+    &__button{
+      background-color: $white;
+      border: none;
+      padding: 0 1rem;
+      i{
+        margin-right: 1rem;
+      }
+      &:hover{
+        background-color: $yellow;
+      }
+    }
+    &__link{
+      transition: var(--transition-base);
+      &:visited, &:link{
+      color: $white;
+      }
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+  &-brand{
+    img{
+      width: 5rem;
+    }
+  }
+  &-toggler{
+    color: $blue;
+    font-size: 2rem;
+    background-color: $white;
   }
 }
-.navbar-brand{
-  img{
-    width: 5rem;
+.navbar-nav .nav-link{
+  margin-left: 1rem;
+  transition: var(--transition-base);
+  &:first-child{
+    margin-left: 0;
   }
-}
-.nav-link{
-  transition: all 0.3s ease-in-out;
   &:visited, &:link{
     color: $white;
   }
   &:hover{
-    color: $yellow;
+    color: $black;
+    background-color: $yellow;
   }
 }
-.navbar-toggler-icon{
-  background-color: $white;
-}
+/* ---------------------------------------------------------------------------- */
+/*Hero section*/
+/* ---------------------------------------------------------------------------- */
 .hero{
-  background-color: $primary;
+  background-color: $blue;
   height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  @include flex(flex, row, wrap, center, center);
+  width: 100%;
+  color:$white;
   &__wrapper{
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+  @include flex(flex, row, wrap, space-around, center);
     & > *{
-      width: 50%;
+      width:50%;
+       @include media(992px){
+        width: 100%;
+       }
+    }
+  }
+  &__aside{
+    @include flex(flex, row, wrap, start    , center);
+    &__h1{
+      @include titulo(3rem, $white);
+      width: 75%;
+    }
+    &__p{
+      @include parrafo($tipo__textos, var(--size-base), 400, $white);
+      width: 75%;
+      margin: 0;
+      padding: 0;
+    }
+    &__button{
+      @include flex(flex, row, wrap, space-around, center);
+      transition: var(--transition-base);
+      background-color: $white;
+      font-size: var(--size-base);
+      border: none;
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      i{
+        margin-left: 1rem;
+      }
+      &:hover{
+        background-color: $yellow;
+      }
     }
   }
   &__trusted{
+    width: 95%;
+    @include flex(flex, row, wrap, space-around, center);
+    &__text{
+      @include flex(flex, row, wrap, center, center);
+      @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+      margin: 0;
+      padding: 0;
+    }
     &__img{
-      width: 3rem;
-      margin: 0 1rem;
+      width: 18%;
     }
   }
-  h1{
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
+  &__article{
+    transition: var(--transition-base);
+    background-color: $white;
+    color: $black;
+    padding: 2rem;
+    border-radius:1rem 1rem 5rem 1rem;
+    &__header{
+      @include flex(flex, row, wrap, space-between, center);
+      &__span{
+        @include flex(flex, row, wrap, center, center);
+        @include titulo(var(--size-lg), $indigo);
+      }
+      &__button{
+        transition: var(--transition-base);
+        border: 1px solid $gray-500;
+        padding: 1rem 1.5rem;
+        background: none;
+        &:hover{
+          background-color: $yellow;
+        }
+      }
+    }
   }
-  p{
-      font-size: 1.5rem;
-      font-weight: 300;
+  &__creditcard{
+    background: linear-gradient(90deg, $indigo 35%, $purple 100%);;
+    padding:1.5rem 2rem;
+    color: $white;
+    border-radius: 1rem;
+    &__header{
+      @include flex(flex, row, wrap, space-between, center);
+      &__img{
+        width: 20%;
+      }
+      &__span{
+        @include flex(flex, row, wrap, center, center);
+        padding:0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $green;
+        @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+      }
+    }
+    &__number{
+      margin-top: 1rem;
+      span{
+        text-transform: uppercase;
+              }
+      p{
+        @include titulo(var(--size-lg), $white);
+        text-align: center;
+        margin: 1rem 0;
+      }
+    }
+    &__info{
+      &__span{
+        text-transform: uppercase;
+      }
+      &__p{
+        @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+      }
+    }
+    &__footer{
+      &__a{
+        display: block;
+        @include parrafo($tipo__textos, var(--size-base), 800, $blue);
+        text-decoration: dotted;
+        &:hover{
+          color: $yellow;
+          text-decoration: none;
+        }
+      }
+      &__article{
+        width: 100%;
+        border-bottom: 1px solid $gray-600;
+        div{
+          @include flex(flex, row, wrap, space-between, center);
+          span{
+            @include parrafo($tipo__textos, var(--size-lg), 400, $indigo);
+          }
+        }
+        p{
+          @include parrafo($tipo__textos, var(--size-base), 400, $gray-600);
+        }
+      }
+    }
   }
 }
+
+
+
 .footer{
   background-color: $indigo;
 }

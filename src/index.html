@@ -10,36 +10,36 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
-      <div class="container border-bottom d-flex justify-content-between">
-        <a class="navbar-brand" href="#"><img src="./img/odoo-white.svg" alt=""></a>
+      <div class="container navbar-border">
+        <a class="navbar-brand" href="#!"><img src="./img/odoo-white.svg" alt="odoo logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">Products</a>
-            <a class="nav-link" href="#">Pages</a>
-            <a class="nav-link" href="#">App</a>
-            <a class="nav-link" href="#">Docs</a>
+            <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#!">Products</a>
+            <a class="nav-link" href="#!">Pages</a>
+            <a class="nav-link" href="#!">App</a>
+            <a class="nav-link" href="#!">Docs</a>
           </div>
         </div>
         <div class="navbar__login">
-          <a class="nav-link" href="#">Sign in</a>
-          <button class="btn btn-light">Buy now</button>
+          <a class="nav-link navbar__login__link" href="#!">Sign in</a>
+          <button class="rounded navbar__login__button"><i class="bi bi-bag-fill"></i> Buy now</button>
         </div>
       </div>
     </nav>
   </header>
   <main>
     <section class="hero">
-      <div class="container hero__wrapper">
+      <div class="container m-0 p-0 hero__wrapper">
         <aside class="hero__aside">
           <h1 class="hero__aside__h1">Development done right</h1>
-          <p>Build a beautiful, modern website with flexible components built from scratch.</p>
-          <button class="hero__aside__button btn">Get started</button>
-          <div class="hero__trusted d-flex justify-content-arround">
+          <p class="hero__aside__p">Build a beautiful, modern website with flexible components built from scratch.</p>
+          <button class="hero__aside__button rounded">Get started <i class="bi bi-plus-lg"></i></button>
+          <div class="hero__trusted">
             <span class="hero__trusted__text">Trusted by:</span>
             <img class="hero__trusted__img" src="./img/google-white.svg" alt="">
             <img class="hero__trusted__img" src="./img/spotify-white.svg" alt="">
@@ -47,38 +47,49 @@
             <img class="hero__trusted__img" src="./img/paypal-white.svg" alt="">
           </div>
         </aside>
-        <article class="hero__article bg-indigo">
+        <article class="hero__article">
           <header class="hero__article__header">
-            Manage cards
-            <button class="hero__article__button btn">Add new</button>
+            <span class="hero__article__header__span">Manage cards</span>
+            <button class="hero__article__header__button rounded">Add new</button>
           </header>
-          <div class="hero__creditcard">
-            <header>
-              logo
-              Active
+          <div class="hero__creditcard shadow my-5">
+            <header class="hero__creditcard__header">
+              <img class="hero__creditcard__header__img" src="./img/mastercard.svg" alt="">
+              <span class="hero__creditcard__header__span">Active</span>
             </header>
-            <div class="hero__creditcard__numer">
-              CARD NUMBER
-              4358
-              7421
-              9256
-              6682
+            <div class="hero__creditcard__number">
+              <span>CARD NUMBER</span>
+              <p>4358 - 7421- 9256 - 6682</p>
             </div>
             <div class="hero__cereditcard__info">
-              NAME
-              John Snow
-              EXPIRY DATE
-              11/23
+              <div class="row">
+                <div class="col-6">
+                  <span class="hero__cereditcard__info__span">NAME</span>
+                  <p class="hero__cereditcard__info__p">John Snow</p>
+                </div>
+                <div class="col-6">
+                  <span class="hero__cereditcard__info__span">EXPIRY DATE</span>
+                  <p class="hero__cereditcard__info__p">11/23</p>
+                </div>
+              </div>
             </div>
           </div>
           <footer class="hero__creditcard__footer">
-            Starbucks
-            $5,50 USD
-            Pending - San Francisco, United States
-            Nike Sports
-            $129,00 USD
-            Pending - Lisbon, Portugal
-            View all
+            <article class="hero__creditcard__footer__article">
+              <div>
+                <span>Starbucks</span>
+                <span>$5,50 USD</span>
+              </div>
+              <p>Pending - San Francisco, United States</p>
+            </article>
+            <article class="hero__creditcard__footer__article">
+              <div>
+                <span>Nike Sports</span>
+                <span>$129,00 USD</span>
+              </div>
+              <p>Pending - Lisbon, Portugal</p>
+            </article>
+            <a href="#!" class="hero__creditcard__footer__a mt-3">View all <i class="bi bi-chevron-double-right"></i></a>
           </footer>
         </article>
       </div>
@@ -289,23 +300,23 @@
           <div class="col-8">
             <div class="footer__content__column">
               <h3 class="footer__content__column__h3">About</h3>
-              <a class="footer__content__column__a" href="#">Services</a>
-              <a class="footer__content__column__a" href="#">Pricing</a>
-              <a class="footer__content__column__a" href="#">Contact</a>
-              <a class="footer__content__column__a" href="#">Careers</a>
+              <a class="footer__content__column__a" href="#!">Services</a>
+              <a class="footer__content__column__a" href="#!">Pricing</a>
+              <a class="footer__content__column__a" href="#!">Contact</a>
+              <a class="footer__content__column__a" href="#!">Careers</a>
             </div>
             <div class="footer__content__column">
               <h3 class="footer__content__column__h3">Company</h3>
-              <a class="footer__content__column__a" href="#">Community</a>
-              <a class="footer__content__column__a" href="#">Help center</a>
-              <a class="footer__content__column__a" href="#">Support</a>
+              <a class="footer__content__column__a" href="#!">Community</a>
+              <a class="footer__content__column__a" href="#!">Help center</a>
+              <a class="footer__content__column__a" href="#!">Support</a>
             </div>
             <div class="footer__content__column">
               <h3 class="footer__content__column__h3">Account</h3>
-              <a class="footer__content__column__a" href="#">Profile</a>
-              <a class="footer__content__column__a" href="#">Settings</a>
-              <a class="footer__content__column__a" href="#">Billing</a>
-              <a class="footer__content__column__a" href="#">Notifications</a>
+              <a class="footer__content__column__a" href="#!">Profile</a>
+              <a class="footer__content__column__a" href="#!">Settings</a>
+              <a class="footer__content__column__a" href="#!">Billing</a>
+              <a class="footer__content__column__a" href="#!">Notifications</a>
             </div>
           </div>
         </div>

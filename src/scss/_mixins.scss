@@ -1,0 +1,33 @@
+@mixin titulo ($size, $color){
+    font-family: $tipo__titulos;
+    font-weight:900;
+    font-size: $size;
+    color: $color;
+}
+@mixin parrafo ($font, $size, $grosor, $color) {
+  font-family:$font;
+  font-size:$size;
+  font-weight:$grosor;
+  color:$color;
+}
+@mixin flex ($flex, $dir, $wrap, $just, $align) {
+    display: $flex;
+    flex-flow: $dir $wrap;
+    justify-content: $just;
+    @if $wrap == 'nowrap' {
+        align-items: $align;
+    }@else{
+        align-content: $align;
+    }
+}
+
+@mixin media($medida: 992px) {
+    @media screen and (max-width: $medida) {
+        @content;
+    }
+}
+@mixin mediadelante($medida: 768px) {
+    @media screen and (min-width: $medida) {
+        @content;
+    }
+}
