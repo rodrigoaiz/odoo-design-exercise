@@ -100,30 +100,27 @@
           <article class="tools__card col-lg-6 shadow">
             <h3 class="tools__card__h3">Awesome projects</h3>
             <div class="tools__card__video">
-              <span>Create the new logo</span>
+              <span data-toggle="modal" data-target="#exampleModal">Create the new logo</span>
               <span class="tools__card__hour">3:50 <i class="bi bi-chevron-right"></i></span>
               <div class="progress-container" data-percentage="50">
                 <div class="progress-bar"></div>
               </div>
             </div>
             <div class="tools__card__video">
-              <span>Set up the color palette</span>
+              <span data-toggle="modal" data-target="#exampleModal">Set up the color palette</span>
               <span class="tools__card__hour">4:00 <i class="bi bi-chevron-right"></i></span>
               <div class="progress-container" data-percentage="75">
                 <div class="progress-bar"></div>
               </div>
             </div>
             <div class="tools__card__video">
-              <span>Wireframe and prototype</span>
+              <span data-toggle="modal" data-target="#exampleModal">Wireframe and prototype</span>
               <span class="tools__card__hour">6:50 <i class="bi bi-chevron-right"></i></span>
               <div class="progress-container" data-percentage="10">
                 <div class="progress-bar"></div>
               </div>
             </div>
-            <div class="tools__card__overlay d-none">
-              <img src="img/img_01.jpg" alt="Play video">
-              <button>Play video</button>
-            </div>
+
           </article>
           <article class="tools__info col-lg-5 order-first order-lg-last">
             <h2 class="tools__info__h2"><span>Tools</span></h2>
@@ -133,6 +130,25 @@
         </div>
       </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <article class="features__video">
+              <img src="img/img_01.jpg" class="img-fluid" alt="Play video">
+              <button class="features__video__button rounded shadow">Play video <i class="bi bi-play"></i></button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="sectionline-left"></div>
     <section class="features">
       <div class="container">
@@ -152,6 +168,7 @@
         </div>
       </div>
     </section>
+    <div class="sectionline-right"></div>
     <section class="technology">
       <div class="container">
         <div class="row align-items-center">
@@ -213,6 +230,7 @@
         </div>
       </div>
     </section>
+    <div class="sectionline-left"></div>
     <section class="install">
       <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -238,6 +256,7 @@
         </div>
       </div>
     </section>
+    <div class="sectionline-right"></div>
     <section class="solutions">
       <div class="container solutions__container">
         <div class="row justify-content-between">
@@ -257,7 +276,7 @@
         <p class="awards__lead">Awards for design, creativity, and innovation on the Internet</p>
       </div>
       <article class="awards__companies">
-        <div class="card-truster shadow">
+        <div class="card-truster shadow card-animation">
           <img src="img/airbnb.svg" class="card-truster__img img-fluid" alt="">
           <div class="star-rating my-3">
             <span class="star" data-rating="1">&#9733;</span>
@@ -269,17 +288,17 @@
           <p class="card-truster__lead">4.95 out of 5 stars</p>
           <p class="card-truster__info">from 23 reviews</p>
         </div>
-        <div class="card-company shadow">
+        <div class="card-company shadow card-animation">
           <img src="img/amazon.svg" class="card-company__img img-fluid" alt="">
           <p class="card-company__lead">They build modern looking websites easily using Tabs.</p>
           <p class="card-company__info"><a href="!#">Learn more</a></p>
         </div>
-        <div class="card-company shadow">
+        <div class="card-company shadow card-animation">
           <img src="img/slack.svg" class="card-company__img img-fluid" alt="">
           <p class="card-company__lead">They build modern looking websites easily using Trello.</p>
           <p class="card-company__info"><a href="!#">Learn more</a></p>
         </div>
-        <div class="card-truster shadow">
+        <div class="card-truster shadow card-animation">
           <img src="img/spotify.svg" class="card-truster__img img-fluid" alt="">
           <div class="star-rating my-3">
             <span class="star" data-rating="1">&#9733;</span>
@@ -291,7 +310,7 @@
           <p class="card-truster__lead">4.05 out of 5 stars</p>
           <p class="card-truster__info">from 87 reviews</p>
         </div>
-        <div class="card-company shadow">
+        <div class="card-company shadow card-animation">
           <img src="img/paypal.svg" class="card-company__img img-fluid" alt="">
           <p class="card-company__lead">They build modern looking websites easily using Docker.</p>
           <p class="card-company__info"><a href="!#">Learn more</a></p>
@@ -431,7 +450,7 @@
             <p class="footer__header__lead">Brilliant solutions for your ideas</p>
             <p class="footer__header__p">Modern-looking websites.</p>
           </div>
-          <div class="col-lg-6 text-center">
+          <div class="col-lg-6 text-right">
             <button class="footer__button rounded"><i class="bi bi-journal-text text-primary"></i> Documentation</button>
             <button class="footer__button rounded bg-primary text-light">Purchase now</button>
           </div>
