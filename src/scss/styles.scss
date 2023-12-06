@@ -139,7 +139,7 @@ $tipo__textos: 'Roboto', sans-serif;
     @include flex(flex, row, wrap, space-around, center);
     &__text{
       @include flex(flex, row, wrap, center, center);
-      @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+      @include parrafo($tipo__textos, var(--size-sm), 900, $white);
       margin: 0;
       padding: 0;
     }
@@ -189,7 +189,7 @@ $tipo__textos: 'Roboto', sans-serif;
         padding:0.5rem 1rem;
         border-radius: 0.5rem;
         background-color: $green;
-        @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+        @include parrafo($tipo__textos, var(--size-sm), 900, $white);
       }
     }
     &__number{
@@ -208,13 +208,13 @@ $tipo__textos: 'Roboto', sans-serif;
         text-transform: uppercase;
       }
       &__p{
-        @include parrafo($tipo__textos, var(--size-sm), 800, $white);
+        @include parrafo($tipo__textos, var(--size-sm), 900, $white);
       }
     }
     &__footer{
       &__a{
         display: block;
-        @include parrafo($tipo__textos, var(--size-base), 800, $blue);
+        @include parrafo($tipo__textos, var(--size-base), 900, $blue);
         text-decoration: dotted;
         &:hover{
           color: $yellow;
@@ -264,7 +264,8 @@ $tipo__textos: 'Roboto', sans-serif;
   }
   &__info{
     &__h2{
-      @include titulo(var(--size-xl), $darkblue);
+      @include titulo(var(--size-xl), $white);
+      margin-bottom: 1rem;
       span{
         border-radius: 2rem;
         padding:0.5rem 1rem;
@@ -272,22 +273,562 @@ $tipo__textos: 'Roboto', sans-serif;
       }
     }
     &__lead{
-      @include parrafo($tipo__textos, var(--size-lg), 800, $darkblue);
+      @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
     }
     &__p{
-      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+      @include parrafo($tipo__textos, var(--size-base), 700, $gray-700);
     }
   }
 
 }
 
+/* ---------------------------------------------------------------------------- */
+/* Features section*/
+/* ---------------------------------------------------------------------------- */
+
+.features{
+  &__info{
+    &__h2{
+      @include titulo(var(--size-xl), $white);
+      margin-bottom: 1rem;
+      span{
+        border-radius: 2rem;
+        padding:0.5rem 1rem;
+        background-color: $green;
+      }
+    }
+    &__lead{
+      @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
+    }
+    &__p{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+    }
+    &__ul{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+      list-style: none;
+      li{
+        @include parrafo($tipo__textos, var(--size-base), 700, $green);
+        @include flex(flex, row, wrap, start, center);
+        margin-bottom: 1rem;
+        &:before{
+          content: '\F26A';
+          font-family: "bootstrap-icons";
+          width: 1rem;
+          height: 1rem;
+          color: $green;
+          margin-right: 1rem;
+          display: inline-block;
+
+        }
+      }
+    }
+  }
+  &__video{
+    position: relative;
+    &__img{
+      border-radius: 2rem;
+    }
+    &__button{
+      @include parrafo($tipo__textos, var(--size-sm), 400, $black);
+      position: absolute;
+      top: 5%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      @include flex(flex, row, wrap, space-around, center);
+      transition: var(--transition-base);
+      background-color: $white;
+      font-size: var(--size-base);
+      border: none;
+      margin: 2rem 0;
+      padding: 0.5rem 1.5rem;
+      i{
+        margin-left: 1rem;
+      }
+      &:hover{
+        background-color: $yellow;
+      }
+    }
+
+  }
+}
 
 /* ---------------------------------------------------------------------------- */
-/*Footer section*/
+/*Technology section*/
+/* ---------------------------------------------------------------------------- */
+
+.technology{
+  &__info{
+    &__h2{
+      @include titulo(var(--size-xl), $white);
+      margin-bottom: 1rem;
+      span{
+        border-radius: 2rem;
+        padding:0.5rem 1rem;
+        background-color: $blue;
+      }
+    }
+    &__lead{
+      @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
+    }
+    &__p{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+    }
+    &__a{
+      transition: var(--transition-base);
+      display: block;
+      @include parrafo($tipo__textos, var(--size-base), 900, $blue);
+      text-decoration: dotted;
+      &:hover{
+        color: $yellow;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+
+/*-----Cards-----*/
+
+.card-photo{
+  border: 1px solid $gray-300;
+  border-radius: 1rem ;
+  overflow: hidden;
+  &__img{
+    width: 100%;
+  }
+  &__footer{
+    @include flex(flex, row, wrap, space-between, center);
+    padding: 1rem;
+  }
+  &__avatar{
+    @include parrafo($tipo__textos, var(--size-sm), 700, $white);
+    @include flex(flex, row, wrap, center, center);
+    padding: 0.5rem 0.6rem;
+    background-color: $yellow;
+    border-radius: 50%;
+  }
+  &__name{
+    @include flex(flex, row, wrap, center, center);
+    @include parrafo($tipo__textos, var(--size-sm), 700, $gray-900);
+  }
+  &__like{
+    @include flex(flex, row, wrap, center, center);
+  }
+}
+.card-simple{
+  @include flex(flex, row, wrap, space-around, center);
+  border: 1px solid $gray-300;
+  border-radius: 1rem ;
+  overflow: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+  p{
+    margin: 0;
+  }
+  &__icon{
+    @include flex(flex, row, wrap, center, center);
+    width: fit-content;
+    i{
+      color: $white;
+      font-size: var(--size-lg);
+      background-color: $green;
+      border-radius: 5rem;
+      display: inline-block;
+      padding:0.1rem 0.6rem;
+
+    }
+  }
+  &__div{
+    width:fit-content;
+  }
+  &__lead{
+    @include parrafo($tipo__textos, var(--size-base), 700, $gray-900);
+  }
+  &__info{
+    @include parrafo($tipo__textos, var(--size-sm), 400, $gray-700);
+  }
+}
+.card-truster{
+  @include flex(flex, column, wrap, center, center);
+  text-align: center;
+  border: 1px solid $gray-300;
+  border-radius: 1rem ;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  width: fit-content;
+  background-color: $white;
+  p{
+    margin: 0;
+  }
+  &__img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  &__lead{
+    @include parrafo($tipo__textos, var(--size-base), 700, $gray-900);
+  }
+  &__info{
+    @include parrafo($tipo__textos, var(--size-sm), 700, $gray-700);
+  }
+}
+.card-company{
+  @include flex(flex, column, wrap, center, center);
+  text-align: center;
+  border: 1px solid $gray-300;
+  border-radius: 1rem ;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  width: fit-content;
+  background-color: $white;
+  &__img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  &__lead{
+    max-width: 15rem;
+    @include parrafo($tipo__textos, var(--size-lg), 400, $gray-600);
+    margin: 3rem 0;
+  }
+  &__info{
+    @include flex(flex, column, wrap, center, center);
+    text-align: center;
+    margin: 0 auto;
+    @include parrafo($tipo__textos, var(--size-base), 700, $gray-700);
+    border-bottom: 3px solid $gray-300;
+    a{
+      transition: var(--transition-base);
+      color: $black;
+      text-decoration: none;
+      &:hover{
+        color: $blue;
+      }
+    }
+
+  }
+}
+
+.card-kit{
+  @include flex(flex, column, wrap, center, center);
+  text-align: center;
+  border: 1px solid $gray-300;
+  border-radius: 1rem ;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+
+  &__img{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 50%;
+  }
+  &__lead{
+    @include parrafo($tipo__textos, var(--size-lg), 700, $gray-900);
+    margin: 1rem 0;
+  }
+  &__avatars{
+    @include flex(flex, row, wrap, center, center);
+    &__img{
+      width: 25%;
+      border-radius: 50%;
+      border: 5px solid $gray-100;
+      margin-left: -1rem;
+      &:first-child{
+        margin-left: 0;
+
+      }
+    }
+
+  }
+  &__footer{
+    border-top:1px solid $gray-300; ;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 1rem;
+    @include flex(flex, row, wrap, space-around, center);
+    padding: 1rem;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* Install section*/
+/* ---------------------------------------------------------------------------- */
+
+.install{
+  &__info{
+    &__h2{
+      @include titulo(var(--size-xl), $white);
+      margin-bottom: 1rem;
+      span{
+        border-radius: 2rem;
+        padding:0.5rem 1rem;
+        background-color: $yellow;
+      }
+    }
+    &__lead{
+      @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
+    }
+    &__p{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+    }
+    &__ul{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-700);
+      list-style: none;
+      li{
+        @include parrafo($tipo__textos, var(--size-base), 700, $green);
+        @include flex(flex, row, wrap, start, center);
+        margin-bottom: 1rem;
+        &:before{
+          content: '\F26A';
+          font-family: "bootstrap-icons";
+          width: 1rem;
+          height: 1rem;
+          color: $green;
+          margin-right: 1rem;
+          display: inline-block;
+
+        }
+      }
+    }
+    &__apps{
+      background-color: $black;
+      padding: 0.5rem 0;
+      cursor: pointer;
+      @include flex(flex, row, wrap, space-around, center);
+      @include parrafo($tipo__textos, var(--size-sm), 400, $white);
+      i{
+        @include flex(flex, row, wrap, center, center);
+        width: fit-content;
+        font-size: 2rem;
+      }
+      &__a{
+        width: fit-content;
+        display: inline-block;
+        span{
+          display: block;
+          width: 100%;
+          @include parrafo($tipo__textos, var(--size-lg), 700, $white);
+        }
+      }
+    }
+
+  }
+  &__video{
+    position: relative;
+    &__img{
+      border-radius: 2rem;
+    }
+    &__button{
+      @include parrafo($tipo__textos, var(--size-sm), 400, $black);
+      position: absolute;
+      top: 5%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      @include flex(flex, row, wrap, space-around, center);
+      transition: var(--transition-base);
+      background-color: $white;
+      font-size: var(--size-base);
+      border: none;
+      margin: 2rem 0;
+      padding: 0.5rem 1.5rem;
+      i{
+        margin-left: 1rem;
+      }
+      &:hover{
+        background-color: $yellow;
+      }
+    }
+
+  }
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* Solutions section*/
+/* ---------------------------------------------------------------------------- */
+
+.solutions{
+  &__container{
+    @include flex(flex, row, wrap, space-around, center);
+    background-color: $indigo;
+    border-radius: 0 5rem  0 5rem;
+    padding: 5rem;
+    @include parrafo($tipo__textos, var(--size-base), 400, $white);
+  }
+  &__info{
+    &__h2{
+      @include titulo(var(--size-xl), $white);
+      margin-bottom: 1rem;
+    }
+
+  }
+  &__cta{
+    @include flex(flex, row, wrap, center, center);
+  }
+  &__button{
+    transition: var(--transition-base);
+    background-color: $white;
+    border: none;
+    padding: 0.8rem 1rem;
+    i{
+      margin-right: 1rem;
+    }
+    &:hover{
+      background-color: $yellow;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Awards section*/
+/* ---------------------------------------------------------------------------- */
+
+.awards{
+  background-color: $gray-200;
+  padding: 5rem 0;
+
+  &__h2{
+    @include titulo(var(--size-xl), $white);
+    margin-bottom: 1rem;
+    span{
+      border-radius: 2rem;
+      padding:0.5rem 1rem;
+      background-color: $blue;
+    }
+  }
+  &__lead{
+    @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
+  }
+  &__p{
+    @include parrafo($tipo__textos, var(--size-base), 700, $gray-700);
+  }
+  &__companies{
+    @include flex(flex, row, wrap, space-evenly, center);
+    margin-top: 2rem;
+    @include media (1670px){
+      div{
+        margin-top: 5rem;
+      }
+    }
+    @include mediadelante(1400px){
+      div:nth-child(odd){
+        transform: translate(0, 2rem);
+      }
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* Answers section*/
+/* ---------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------- */
+/* Newproject section*/
+/* ---------------------------------------------------------------------------- */
+
+
+.newproject{
+  &__lead{
+    width: 100%;
+    @include parrafo($tipo__textos, var(--size-lg), 700, $darkblue);
+  }
+  &__button{
+    transition: var(--transition-base);
+    background-color: $blue;
+    color: $white;
+    border: none;
+    padding: 0.8rem 1rem;
+    margin-right: 2rem;
+    i{
+      margin-right: 1rem;
+    }
+    &:hover{
+      background-color: $yellow;
+    }
+  }
+}
+/* ---------------------------------------------------------------------------- */
+/* Footer section*/
 /* ---------------------------------------------------------------------------- */
 .footer{
+  margin-top: 5rem;
+  padding-top: 5rem;
   background-color: $indigo;
+  color: $white;
+  p{
+    margin: 0;
+  }
+  &__header{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $gray-100;
+    &__lead{
+      @include parrafo($tipo__textos, var(--size-lg), 700, $white);
+    }
+    &__p{
+      @include parrafo($tipo__textos, var(--size-base), 400, $gray-300);
+    }
+  }
+  &__content{
+    padding: 2rem 0;
+    border-bottom: 1px solid $gray-100;
+    &__logo{
+      width: 4rem;
+    }
+    &__p {
+      @include parrafo($tipo__textos, var(--size-sm), 400, $white);
+      margin-top: 2rem;
+    }
+    &__column {
+      width: 30%;
+      @include flex(flex, column, wrap, start, center);
+      &__h3{
+        @include parrafo($tipo__textos, var(--size-base), 900, $white);
+        padding-bottom: 1rem;
+      }
+      &__a{
+        transition: var(--transition-base);
+        color: $white;
+        &:hover{
+          color: $yellow;
+        }
+      }
+
+    }
+    &__socials{
+      @include flex(flex, row, wrap, space-around, center);
+      margin-top: 2rem;
+      &__a{
+        transition: var(--transition-base);
+        color: $white;
+        &:hover{
+          color: $yellow;
+        }
+      }
+    }
+  }
+  &__legal{
+    @include parrafo($tipo__textos, var(--size-sm), 400, $white);
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    a{
+      transition: var(--transition-base);
+      color: $white;
+      margin-left: 2rem;
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
 }
+
+/* ---------------------------------------------------------------------------- */
+/* Scripts classes*/
+/* ---------------------------------------------------------------------------- */
 
 .progress-container {
   width: 100%;
@@ -306,4 +847,18 @@ $tipo__textos: 'Roboto', sans-serif;
   width: 100%;
   height: 10rem;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="M50,50 A40,40 0 0,1 90,50 L50,50 Z" fill="transparent" stroke="#ccc" stroke-width="5" stroke-dasharray="5,5" /></svg>') no-repeat center center;
+}
+.star-rating {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.star {
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star:hover,
+.star.active {
+  color: #ffcc00;
 }

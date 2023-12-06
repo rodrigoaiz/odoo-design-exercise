@@ -125,7 +125,7 @@
               <button>Play video</button>
             </div>
           </article>
-          <article class="tools__info col-lg-5">
+          <article class="tools__info col-lg-5 order-first order-lg-last">
             <h2 class="tools__info__h2"><span>Tools</span></h2>
             <p class="tools__info__lead">We build for designers and developers</p>
             <p class="tools__info__p">Get components and examples, including tons of variables that will help you grow your business.</p>
@@ -136,30 +136,32 @@
     <div class="sectionline-left"></div>
     <section class="features">
       <div class="container">
-        <div class="row">
-          <article class="features__info col-6">
-            <h2 class="features__info__h2">Features</h2>
+        <div class="row align-items-center">
+          <article class="features__info col-lg-6">
+            <h2 class="features__info__h2"><span>Features</span></h2>
             <p class="features__info__lead">Get components and examples, including tons of variables that will help you grow your business.</p>
             <ul class="features__info__ul">
               <li>Perfect for modern startups</li>
               <li>Fully customizable and scalable</li>
             </ul>
           </article>
-          <article class="features__video col-6">
-            <img src="img/img_02.jpg" class="img-fluid" alt="Play video">
-            <button>Play video</button>
+          <article class="features__video col-lg-6">
+            <img src="img/img_02.jpg" class="img-fluid features__video__img" alt="Play video">
+            <button class="features__video__button rounded shadow">Play video <i class="bi bi-play"></i></button>
           </article>
         </div>
       </div>
     </section>
     <section class="technology">
       <div class="container">
-        <div class="row">
-          <article class="technology__cards col-6">
-            <div class="row alignt-items-center">
-              <div class="col-lg-6">
+        <div class="row align-items-center">
+          <article class="technology__cards col-lg-7">
+            <div class="row align-items-center">
+              <div class="col-6">
                 <div class="card-photo">
-                  <img src="img/person_03.jpg" class="img-fluid" alt="Jimmy Hendrix">
+                  <header>
+                    <img src="img/person_03.jpg" class="img-fluid card-photo__img" alt="Jimmy Hendrix">
+                  </header>
                   <footer class="card-photo__footer">
                     <span class="card-photo__avatar">JH</span>
                     <span class="card-photo__name">Jimmy Hendrix</span>
@@ -167,15 +169,23 @@
                   </footer>
                 </div>
                 <div class="card-simple">
-                  <span class="card-simple__icon">icon</span>
-                  <p class="card-simple__lead">300+ components</p>
-                  <p class="card-simple__info">Built to be customized.</p>
+                  <span class="card-simple__icon"><i class="bi bi-check"></i></span>
+                  <div class="card-simple__div">
+                    <p class="card-simple__lead">300+ components</p>
+                    <p class="card-simple__info">Built to be customized.</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-6">
                 <div class="card-truster">
                   <img src="img/airbnb.svg" class="card-truster__img img-fluid" alt="">
-                  <div class="card-truster__stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                  <div class="star-rating my-3">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                  </div>
                   <p class="card-truster__lead">4.95 out of 5 stars</p>
                   <p class="card-truster__info">from 23 reviews</p>
                 </div>
@@ -183,9 +193,9 @@
                   <img src="img/company_01.png" class="card-kit__img full-circle img-fluid" alt="">
                   <p class="card-kit__lead">Website UI Kit</p>
                   <div class="card-kit__avatars">
-                    <img src="img/person_01.jpg" class="card-kit__avatar img-fluid" alt="">
-                    <img src="img/person_02.jpg" class="card-kit__avatar img-fluid" alt="">
-                    <img src="img/person_03.jpg" class="card-kit__avatar img-fluid" alt="">
+                    <img src="img/person_01.jpg" class="card-kit__avatars__img img-fluid" alt="">
+                    <img src="img/person_02.jpg" class="card-kit__avatars__img img-fluid" alt="">
+                    <img src="img/person_03.jpg" class="card-kit__avatars__img img-fluid" alt="">
                   </div>
                   <footer class="card-kit__footer">
                     <i class="bi bi-paperclip"></i><i class="bi bi-eye"></i><i class="bi bi-heart"></i>
@@ -194,54 +204,98 @@
               </div>
             </div>
           </article>
-          <article class="technology__info col-6">
-            <h2 class="technology__info__h2">Technology</h2>
+          <article class="technology__info col-lg-5 order-first order-lg-last">
+            <h2 class="technology__info__h2"><span>Technology</span></h2>
             <p class="technology__info__lead">We use the latest technologies on the market</p>
             <p class="technology__info__p">Get components and examples, including tons of variables that will help you grow your business.</p>
-            <a class="technology__info__a">See case studies</a>
+            <a href="!#" class="technology__info__a">See case studies</a>
           </article>
         </div>
       </div>
     </section>
     <section class="install">
       <div class="container">
-        <div class="row">
-          <article class="install__info col-6">
-            <h2 class="install__info__h2">Easy to install</h2>
+        <div class="row align-items-center justify-content-between">
+          <article class="install__info col-lg-5">
+            <h2 class="install__info__h2"><span>Easy to install</span></h2>
             <p class="install__info__lead">Download, install and run.</p>
             <p class="install__info__p">Get components and examples, including tons of variables that will help you grow your business.</p>
-            <a class="install__info__a">Download on the App Store</a>
-            <a class="install__info__a">Download on the Play Store</a>
+            <div class="row justify-content-around align-items-center">
+              <div class="col-5 rounded install__info__apps">
+                <i class="bi bi-apple"></i>
+                <div class="install__info__apps__a">Download on the <span>App Store</span></div>
+              </div>
+              <div class="col-5 rounded  install__info__apps">
+                <i class="bi bi-google-play"></i>
+                <div class="install__info__apps__a">Download on the <span>Play Store</span></div>
+              </div>
+            </div>
           </article>
-          <article class="install__video col-6">
-            <img src="img/img_03.jpg" class="img-fluid" alt="Play video">
-            <button>Play video</button>
+          <article class="install__video col-lg-6">
+            <img src="img/img_03.jpg" class="img-fluid install__video__img" alt="Play video">
+            <button class="install__video__button rounded shadow">Play video <i class="bi bi-play"></i></button>
           </article>
         </div>
       </div>
     </section>
     <section class="solutions">
-      <div class="container">
-        <div class="row">
-          <article class="solutions__cta col-6">
-            <button>Learn more <i class="bi bi-arrow-right"></i></button>
-          </article>
-          <article class="solutions__info col-6">
+      <div class="container solutions__container">
+        <div class="row justify-content-between">
+          <article class="solutions__info col-8">
             <h2 class="solutions__info__h2">Infinite solutions</h2>
             <p class="solutions__info__p">Intuitive markup, powerful and lightning-fast build tools, everything you need to turn your ideas into incredible products. Learn more</p>
+          </article>
+          <article class="solutions__cta col-4">
+            <button class="solutions__button rounded">Learn more <i class="bi bi-arrow-right"></i></button>
           </article>
         </div>
       </div>
     </section>
-    <section class="awards bg-light">
+    <section class="awards">
       <div class="container">
-        <h2 class="awards__h2">Awards</h2>
+        <h2 class="awards__h2"><span>Awards</span></h2>
         <p class="awards__lead">Awards for design, creativity, and innovation on the Internet</p>
       </div>
       <article class="awards__companies">
-        4.95 out of 5 stars from 23 reviews
-        They build modern-looking websites easily using Tabs.
-        Learn more
+        <div class="card-truster shadow">
+          <img src="img/airbnb.svg" class="card-truster__img img-fluid" alt="">
+          <div class="star-rating my-3">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+          <p class="card-truster__lead">4.95 out of 5 stars</p>
+          <p class="card-truster__info">from 23 reviews</p>
+        </div>
+        <div class="card-company shadow">
+          <img src="img/amazon.svg" class="card-company__img img-fluid" alt="">
+          <p class="card-company__lead">They build modern looking websites easily using Tabs.</p>
+          <p class="card-company__info"><a href="!#">Learn more</a></p>
+        </div>
+        <div class="card-company shadow">
+          <img src="img/slack.svg" class="card-company__img img-fluid" alt="">
+          <p class="card-company__lead">They build modern looking websites easily using Trello.</p>
+          <p class="card-company__info"><a href="!#">Learn more</a></p>
+        </div>
+        <div class="card-truster shadow">
+          <img src="img/spotify.svg" class="card-truster__img img-fluid" alt="">
+          <div class="star-rating my-3">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+          <p class="card-truster__lead">4.05 out of 5 stars</p>
+          <p class="card-truster__info">from 87 reviews</p>
+        </div>
+        <div class="card-company shadow">
+          <img src="img/paypal.svg" class="card-company__img img-fluid" alt="">
+          <p class="card-company__lead">They build modern looking websites easily using Docker.</p>
+          <p class="card-company__info"><a href="!#">Learn more</a></p>
+        </div>
       </article>
     </section>
     <section class="answers">
@@ -269,10 +323,9 @@
     <section class="newproject">
       <div class="container text-center">
         <p class="newproject__lead">I want to start a new project.</p>
-        <button class="newproject__button btn">Buy now</button>
+        <button class="newproject__button rounded">Buy now <i class="bi bi-arrow-right"></i></button>
         <a href="">Learn more</a>
       </div>
-
     </section>
 
   </main>
@@ -280,14 +333,14 @@
   <footer class="footer">
     <div class="container">
       <header class="footer__header">
-        <div class="row">
-          <div class="col-6">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-6">
             <p class="footer__header__lead">Brilliant solutions for your ideas</p>
             <p class="footer__header__p">Modern-looking websites.</p>
           </div>
-          <div class="col-6">
-            <buttom class="footer__buttom"><i class="bi bi-journal-text"></i> Documentation</buttom>
-            <buttom class="footer__buttom">Purchase now</buttom>
+          <div class="col-lg-6 text-center">
+            <button class="footer__button"><i class="bi bi-journal-text"></i> Documentation</button>
+            <button class="footer__button">Purchase now</button>
           </div>
         </div>
       </header>
@@ -296,23 +349,29 @@
           <div class="col-4">
             <img class="footer__content__logo" src="img/odoo-white.svg" alt="">
             <p class="footer__content__p">Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+            <div class="footer__content__socials">
+              <i class="bi bi-dribbble"></i>
+              <i class="bi bi-github"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-facebook"></i>
+            </div>
           </div>
-          <div class="col-8">
+          <div class="col-7 justify-content-between d-flex">
             <div class="footer__content__column">
-              <h3 class="footer__content__column__h3">About</h3>
+              <p class="footer__content__column__h3">About</p>
               <a class="footer__content__column__a" href="#!">Services</a>
               <a class="footer__content__column__a" href="#!">Pricing</a>
               <a class="footer__content__column__a" href="#!">Contact</a>
               <a class="footer__content__column__a" href="#!">Careers</a>
             </div>
             <div class="footer__content__column">
-              <h3 class="footer__content__column__h3">Company</h3>
+              <p class="footer__content__column__h3">Company</p>
               <a class="footer__content__column__a" href="#!">Community</a>
               <a class="footer__content__column__a" href="#!">Help center</a>
               <a class="footer__content__column__a" href="#!">Support</a>
             </div>
             <div class="footer__content__column">
-              <h3 class="footer__content__column__h3">Account</h3>
+              <p class="footer__content__column__h3">Account</p>
               <a class="footer__content__column__a" href="#!">Profile</a>
               <a class="footer__content__column__a" href="#!">Settings</a>
               <a class="footer__content__column__a" href="#!">Billing</a>
@@ -322,8 +381,8 @@
         </div>
       </div>
       <div class="footer__legal">
-        <div class="d-flex justify-content-arround">
-          <article>© Odoo. All rights reserved</article>
+        <div class="d-flex justify-content-between">
+          <article>© <strong>Odoo</strong>. All rights reserved</article>
           <article>
             <a href="">Terms</a>
             <a href="">Privacy</a>
