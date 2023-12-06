@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap w/ Vite</title>
+  <title>Odoo - Development done right</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container border-bottom">
-        <a class="navbar-brand" href="#"><img class="d-block" src="./img/odoo-white.svg" alt=""></a>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container border-bottom d-flex justify-content-between">
+        <a class="navbar-brand" href="#"><img src="./img/odoo-white.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,9 +23,11 @@
             <a class="nav-link" href="#">Pages</a>
             <a class="nav-link" href="#">App</a>
             <a class="nav-link" href="#">Docs</a>
-            Sign in
-            Buy now
           </div>
+        </div>
+        <div class="navbar__login">
+          <a class="nav-link" href="#">Sign in</a>
+          <button class="btn btn-light">Buy now</button>
         </div>
       </div>
     </nav>
@@ -38,11 +40,11 @@
           <p>Build a beautiful, modern website with flexible components built from scratch.</p>
           <button class="hero__aside__button btn">Get started</button>
           <div class="hero__trusted d-flex justify-content-arround">
-            Trusted by:
+            <span class="hero__trusted__text">Trusted by:</span>
             <img class="hero__trusted__img" src="./img/google-white.svg" alt="">
-            <img class="hero__trusted__img" src="./img/spotify.svg" alt="">
-            <img class="hero__trusted__img" src="./img/airbnb.svg" alt="">
-            <img class="hero__trusted__img" src="./img/paypal.svg" alt="">
+            <img class="hero__trusted__img" src="./img/spotify-white.svg" alt="">
+            <img class="hero__trusted__img" src="./img/airbnb-white.svg" alt="">
+            <img class="hero__trusted__img" src="./img/paypal-white.svg" alt="">
           </div>
         </aside>
         <article class="hero__article bg-indigo">
@@ -81,48 +83,127 @@
         </article>
       </div>
     </section>
+    <section class="tools">
+      <div class="container">
+        <div class="row">
+          <article class="tools__card col-6">
+            <h3 class="tools__card__h3">Awesome projects</h3>
+            <div class="tools__card__video">
+              Create the new logo
+              3:50
+              <div class="progress-container" data-percentage="50">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="tools__card__video">
+              Set up the color palette
+              4:00
+              <div class="progress-container" data-percentage="75">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="tools__card__video">
+              Wireframe and prototype
+              6:50
+              <div class="progress-container" data-percentage="10">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="tools__card__overlay d-none">
+              <img src="img/img_01.jpg" alt="Play video">
+              <button>Play video</button>
+            </div>
+          </article>
+          <article class="tools__info col-6">
+            <h2 class="tools__h2">Tools</h2>
+            <p class="tools__info__lead">We build for designers and developers</p>
+            <p class="tools__info__p">Get components and examples, including tons of variables that will help you grow your business.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="sectionline-left"></div>
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <article class="features__info col-6">
+            <h2 class="features__info__h2">Features</h2>
+            <p class="features__info__lead">Get components and examples, including tons of variables that will help you grow your business.</p>
+            <ul class="features__info__ul">
+              <li>Perfect for modern startups</li>
+              <li>Fully customizable and scalable</li>
+            </ul>
+          </article>
+          <article class="features__video col-6">
+            <img src="img/img_02.jpg" class="img-fluid" alt="Play video">
+            <button>Play video</button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="technology">
+      <div class="container">
+        <div class="row">
+          <article class="technology__cards col-6">
+            <div class="row alignt-items-center">
+              <div class="col-lg-6">
+                <div class="card-photo">
+                  <img src="img/person_03.jpg" class="img-fluid" alt="Jimmy Hendrix">
+                  <footer class="card-photo__footer">
+                    <span class="card-photo__avatar">JH</span>
+                    <span class="card-photo__name">Jimmy Hendrix</span>
+                    <span class="card-photo__like">❤️</span>
+                  </footer>
+                </div>
+                <div class="card-simple">
+                  <span class="card-simple__icon">icon</span>
+                  <p class="card-simple__lead">300+ components</p>
+                  <p class="card-simple__info">Built to be customized.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card-truster">
+                  <img src="img/airbnb.svg" class="card-truster__img img-fluid" alt="">
+                  <div class="card-truster__stars">⭐⭐⭐⭐⭐</div>
+                  <p class="card-truster__lead">4.95 out of 5 stars</p>
+                  <p class="card-truster__info">from 23 reviews</p>
+                </div>
+                <div class="card-kit">
+                  <img src="img/company_01.png" class="card-kit__img full-circle img-fluid" alt="">
+                  <p class="card-kit__lead">Website UI Kit</p>
+                  <div class="card-kit__avatars">
+                    <img src="img/person_01.jpg" class="card-kit__avatar img-fluid" alt="">
+                    <img src="img/person_02.jpg" class="card-kit__avatar img-fluid" alt="">
+                    <img src="img/person_03.jpg" class="card-kit__avatar img-fluid" alt="">
+                  </div>
+                  <footer class="card-kit__footer">
+
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="technology__info col-6">
+            <h2 class="technology__info__h2">Technology</h2>
+            <p class="technology__info__lead">We use the latest technologies on the market</p>
+            <p class="technology__info__p">Get components and examples, including tons of variables that will help you grow your business.</p>
+            <a class="technology__info__a">See case studies</a>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
 
 
-  Development done right
-  Build a beautiful, modern website with flexible components built from scratch.
-  Get started
 
 
 
 
-  Tools
-  We build for designers and developers
-  Get components and examples, including tons of variables that will help you grow your business.
-
-  Awesome projects
-  Create the new logo
-  3:50
-  Set up the color palette
-  4:00
-  Wireframe and prototype
-  6:50
-  Play video
-
-  Features
-  Get components and examples, including tons of variables that will help you grow your business.
-  ● Perfect for modern startups
-  ● Fully customizable and scalable
 
 
-  Technology
-  We use the latest technologies on the market
-  Get components and examples, including tons of variables that will help you grow your business.
-  See case studies
 
-  Jimmy Hendrix
-  300+ components
-  Built to be customized.
 
-  4.95 out of 5 stars from 23 reviews
-
-  Website UI Kit
 
 
   Easy to install
