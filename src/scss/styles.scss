@@ -726,7 +726,52 @@ $tipo__textos: 'Roboto', sans-serif;
 /* Answers section*/
 /* ---------------------------------------------------------------------------- */
 
+.answers {
+  margin-top: 5rem;
+  &__h2{
+    text-align: center;
+    @include titulo(var(--size-xl), $indigo);
+    margin-bottom: 1rem;
+  }
+  &__lead{
+    text-align: center;
+    @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
+  }
+  &__accordion{
+    margin: 2rem 0;
+  }
+}
+.card{
+  margin-bottom: 2rem;
+  border: 1px solid $gray-300 !important;
+  box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.25);
+-webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.25);
+  button{
 
+    text-decoration: none !important;
+    color: $darkblue;
+    :hover{
+      text-decoration: none !important;
+    }
+  }
+}
+.card-header{
+  position: relative;
+  height: auto;
+  &:after{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    bottom: 0;
+    transform: translate(0,35%);
+    content: '\F4F9';
+    font-family: "bootstrap-icons";
+
+    color: $gray-500;
+
+  }
+}
 /* ---------------------------------------------------------------------------- */
 /* Newproject section*/
 /* ---------------------------------------------------------------------------- */
@@ -760,6 +805,20 @@ $tipo__textos: 'Roboto', sans-serif;
   padding-top: 5rem;
   background-color: $indigo;
   color: $white;
+  &__button{
+    transition: var(--transition-base);
+    background-color: $white;
+    border: none;
+    padding: 0.8rem 1rem;
+    margin-right: 2rem;
+    @include parrafo($tipo__textos, var(--size-sm), 700, $black);
+    i{
+      margin-right: 1rem;
+    }
+    &:hover{
+      background-color: $yellow;
+    }
+  }
   p{
     margin: 0;
   }
@@ -826,6 +885,11 @@ $tipo__textos: 'Roboto', sans-serif;
   }
 }
 
+.sectionline-left{
+  width: 100%;
+  height: 10rem;
+  background: red
+}
 /* ---------------------------------------------------------------------------- */
 /* Scripts classes*/
 /* ---------------------------------------------------------------------------- */
@@ -842,11 +906,6 @@ $tipo__textos: 'Roboto', sans-serif;
   background-color:$yellow;
   width: 0;
   position: absolute;
-}
-.sectionline-left{
-  width: 100%;
-  height: 10rem;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="M50,50 A40,40 0 0,1 90,50 L50,50 Z" fill="transparent" stroke="#ccc" stroke-width="5" stroke-dasharray="5,5" /></svg>') no-repeat center center;
 }
 .star-rating {
   font-size: 2em;
