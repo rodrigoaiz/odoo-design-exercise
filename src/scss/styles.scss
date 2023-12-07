@@ -27,7 +27,7 @@ $tipo__textos: 'Roboto', sans-serif;
 .navbar{
   background-color: $blue;
   padding-top: 2rem;
-  @include media(400px){
+  @include media(767px){
     padding-top: 0.5rem;
   }
   &-collapse{
@@ -59,7 +59,7 @@ $tipo__textos: 'Roboto', sans-serif;
       padding: 0 1rem;
       i{
         margin-right: 1rem;
-        @include media(400px){
+        @include media(767px){
           display: none;
         }
       }
@@ -106,13 +106,17 @@ $tipo__textos: 'Roboto', sans-serif;
 /*Hero section*/
 /* ---------------------------------------------------------------------------- */
 .hero{
-  background: url('../img/bg-line-blue.jpg') no-repeat bottom center;
-  background-size: 100% auto;
-
   background-color: $blue;
+  @include mediadelante (992px){
+    background: url('../img/bg-line-blue.jpg') no-repeat bottom center;
+    background-size: 100% auto;
+    background-color: $blue;
+  }
+
   height: 95svh;
-  @include media(400px){
-    height: auto
+  @include media(992px){
+    height: auto;
+    padding-bottom: 1rem;
   }
   @include flex(flex, row, wrap, center, center);
   width: 100%;
@@ -130,7 +134,7 @@ $tipo__textos: 'Roboto', sans-serif;
       @include titulo(4rem, $white);
       width: 75%;
       @include media(992px){
-        padding-top: 5rem;
+        padding-top: 1rem;
         width: 100%;
         font-size: var(--size-xxxl);
       }
@@ -140,6 +144,10 @@ $tipo__textos: 'Roboto', sans-serif;
       width: 75%;
       margin: 0;
       padding: 0;
+      @include media(992px){
+        padding-top: 1rem;
+        width: 100%;
+      }
     }
     &__button{
       @include media(992px){
@@ -164,14 +172,30 @@ $tipo__textos: 'Roboto', sans-serif;
   &__trusted{
     width: 95%;
     @include flex(flex, row, wrap, space-around, center);
+    @include media(992px){
+        margin: 1rem auto;
+      }
     &__text{
       @include flex(flex, row, wrap, center, center);
       @include parrafo($tipo__textos, var(--size-sm), 900, $white);
       margin: 0;
       padding: 0;
+      @include media(992px){
+        font-size: var(--size-base);
+      }
+      @include media(400px){
+        width: 100%;
+        text-align: center;
+      }
     }
     &__img{
       width: 18%;
+      @include media(992px){
+        width: 13%;
+      }
+      @include media(400px){
+        width: 30%;
+      }
     }
     @include media(992px){
       margin-bottom: 2rem;
@@ -198,6 +222,9 @@ $tipo__textos: 'Roboto', sans-serif;
         border: 1px solid $gray-500;
         padding: 1rem 1.5rem;
         background: none;
+        @include media(767px){
+          padding: 0.5rem 1rem;
+        }
         &:hover{
           background-color: $yellow;
         }
@@ -226,7 +253,7 @@ $tipo__textos: 'Roboto', sans-serif;
       margin-top: 1rem;
       span{
         text-transform: uppercase;
-              }
+      }
       p{
         @include titulo(var(--size-lg), $white);
         text-align: center;
@@ -238,7 +265,7 @@ $tipo__textos: 'Roboto', sans-serif;
         text-transform: uppercase;
       }
       &__p{
-        @include parrafo($tipo__textos, var(--size-sm), 900, $white);
+        @include parrafo($tipo__textos, var(--size-base), 900, $white);
       }
     }
     &__footer{
@@ -441,6 +468,13 @@ $tipo__textos: 'Roboto', sans-serif;
   &__name{
     @include flex(flex, row, wrap, center, center);
     @include parrafo($tipo__textos, var(--size-sm), 700, $gray-900);
+    @include media(767px){
+
+      width: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   &__like{
     @include flex(flex, row, wrap, center, center);
@@ -577,6 +611,9 @@ $tipo__textos: 'Roboto', sans-serif;
     border-top:1px solid $gray-300; ;
     margin: 0 auto;
     width: 50%;
+    @include media (767px){
+      width: 100%;
+    }
     margin-top: 1rem;
     @include flex(flex, row, wrap, space-around, center);
     padding: 1rem;
@@ -649,7 +686,11 @@ $tipo__textos: 'Roboto', sans-serif;
 
   }
   &__video{
+
     position: relative;
+    @include media(767px){
+      margin-top: 2rem;
+    }
     &__img{
       border-radius: 2rem;
     }
@@ -689,6 +730,10 @@ $tipo__textos: 'Roboto', sans-serif;
     border-radius: 0 5rem  0 5rem;
     padding: 5rem;
     @include parrafo($tipo__textos, var(--size-base), 400, $white);
+    @include media(767px){
+      border-radius: 0;
+      padding: 2rem;
+    }
   }
   &__info{
     &__h2{
@@ -722,6 +767,9 @@ $tipo__textos: 'Roboto', sans-serif;
   background-color: $gray-200;
   padding: 5rem 0;
   margin-top: 5rem;
+  @include media(575px){
+     margin:0;
+  }
   &__h2{
     @include titulo(var(--size-xl), $white);
     margin-bottom: 1rem;
@@ -745,7 +793,7 @@ $tipo__textos: 'Roboto', sans-serif;
         margin-top: 5rem;
       }
     }
-    @include mediadelante(1400px){
+    @include mediadelante(1767px){
       div:nth-child(odd){
         transform: translate(0, 2rem);
       }
@@ -770,7 +818,7 @@ $tipo__textos: 'Roboto', sans-serif;
     @include parrafo($tipo__textos, var(--size-lg), 900, $darkblue);
   }
   &__accordion{
-    margin: 2rem 0;
+    //margin: 2rem 0;
   }
 }
 .card{
@@ -845,6 +893,9 @@ $tipo__textos: 'Roboto', sans-serif;
     border: none;
     padding: 0.8rem 1rem;
     margin-right: 2rem;
+    @include media(767px){
+      margin: 0;
+    }
     @include parrafo($tipo__textos, var(--size-sm), 700, $black);
     i{
       margin-right: 1rem;
@@ -919,6 +970,13 @@ $tipo__textos: 'Roboto', sans-serif;
     }
   }
   &__legal{
+    text-align: center;
+    @include flex(flex, row, wrap, space-between, center);
+    @include media(767px){
+      margin-top: 2rem;
+      @include flex(flex, column, wrap, center, center);
+      margin-top: 1rem;
+    }
     @include parrafo($tipo__textos, var(--size-sm), 400, $white);
     margin-top: 2rem;
     padding-bottom: 2rem;
@@ -926,6 +984,9 @@ $tipo__textos: 'Roboto', sans-serif;
       transition: var(--transition-base);
       color: $white;
       margin-left: 2rem;
+      &:first-child{
+        margin-left: 0;
+      }
       &:hover{
         color: $yellow;
       }
