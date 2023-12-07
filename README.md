@@ -27,6 +27,10 @@ or
  npm run build
 ```
 
+## Dist demo
+
+https://rodrigoaizpuru.com/odoo/
+
 ## Documentation
 
 Some changes were made to the original mock-up:
