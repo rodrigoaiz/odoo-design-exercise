@@ -109,7 +109,7 @@ $tipo__textos: 'Roboto', sans-serif;
     }
     @include flex(flex, row, wrap, start    , center);
     &__h1{
-      @include titulo(3rem, $white);
+      @include titulo(4rem, $white);
       width: 75%;
     }
     &__p{
@@ -124,7 +124,7 @@ $tipo__textos: 'Roboto', sans-serif;
       background-color: $white;
       font-size: var(--size-base);
       border: none;
-      margin: 2rem 0;
+      margin: 2.5rem 0;
       padding: 1rem 1.5rem;
       i{
         margin-left: 1rem;
@@ -227,11 +227,11 @@ $tipo__textos: 'Roboto', sans-serif;
         div{
           @include flex(flex, row, wrap, space-between, center);
           span{
-            @include parrafo($tipo__textos, var(--size-lg), 400, $indigo);
+            @include parrafo($tipo__textos, var(--size-base), 400, $indigo);
           }
         }
         p{
-          @include parrafo($tipo__textos, var(--size-base), 400, $gray-600);
+          @include parrafo($tipo__textos, var(--size-sm), 400, $gray-600);
         }
       }
     }
@@ -598,6 +598,7 @@ $tipo__textos: 'Roboto', sans-serif;
       background-color: $black;
       padding: 0.5rem 0;
       cursor: pointer;
+      margin-top: 2rem;
       @include flex(flex, row, wrap, space-around, center);
       @include parrafo($tipo__textos, var(--size-sm), 400, $white);
       i{
@@ -838,6 +839,7 @@ $tipo__textos: 'Roboto', sans-serif;
     border-bottom: 1px solid $gray-100;
     &__logo{
       width: 4rem;
+      margin-bottom: 1rem;
     }
     &__p {
       @include parrafo($tipo__textos, var(--size-sm), 400, $white);

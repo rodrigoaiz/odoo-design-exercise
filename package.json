@@ -2,9 +2,10 @@
   "name": "odoo-design-exercise",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "vite",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,7 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.69.5",
-    "vite": "^5.0.5"
+    "vite": "^5.0.5",
+    "vite-plugin-html": "^3.2.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
