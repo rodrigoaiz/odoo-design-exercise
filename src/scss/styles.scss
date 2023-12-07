@@ -36,6 +36,10 @@ $tipo__textos: 'Roboto', sans-serif;
     @include flex(flex, row, wrap, center, center);
     border-bottom: 1px solid $white;
     padding-bottom: 2rem;
+    @include media(991px){
+      border: none;
+      padding-bottom: 0.5rem;
+    }
   }
   &__login{
     @include flex(flex, row, wrap, center, space-around);
@@ -94,8 +98,11 @@ $tipo__textos: 'Roboto', sans-serif;
 /*Hero section*/
 /* ---------------------------------------------------------------------------- */
 .hero{
+  background: url('../img/bg-line-blue.jpg') no-repeat bottom center;
+  background-size: 100% auto;
+
   background-color: $blue;
-  height: 100svh;
+  height: 95svh;
   @include flex(flex, row, wrap, center, center);
   width: 100%;
   color:$white;
@@ -111,6 +118,11 @@ $tipo__textos: 'Roboto', sans-serif;
     &__h1{
       @include titulo(4rem, $white);
       width: 75%;
+      @include media(992px){
+        padding-top: 5rem;
+        width: 100%;
+        font-size: var(--size-xxxl);
+      }
     }
     &__p{
       @include parrafo($tipo__textos, var(--size-base), 400, $white);
@@ -119,6 +131,10 @@ $tipo__textos: 'Roboto', sans-serif;
       padding: 0;
     }
     &__button{
+      @include media(992px){
+        text-align: center;
+        margin: 1rem auto;
+      }
       @include flex(flex, row, wrap, space-around, center);
       transition: var(--transition-base);
       background-color: $white;
@@ -145,6 +161,9 @@ $tipo__textos: 'Roboto', sans-serif;
     }
     &__img{
       width: 18%;
+    }
+    @include media(992px){
+      margin-bottom: 2rem;
     }
   }
   &__article{
@@ -804,7 +823,9 @@ $tipo__textos: 'Roboto', sans-serif;
 /* ---------------------------------------------------------------------------- */
 .footer{
   margin-top: 5rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
+  background: url('../img/bg-line-indigo.jpg') no-repeat top center;
+  background-size: 100% auto;
   background-color: $indigo;
   color: $white;
   &__button{
@@ -833,6 +854,13 @@ $tipo__textos: 'Roboto', sans-serif;
     &__p{
       @include parrafo($tipo__textos, var(--size-base), 400, $gray-300);
     }
+    &__buttons{
+      text-align: right;
+      @include media(991px){
+        margin-top: 2rem;
+        text-align: center;
+      }
+    }
   }
   &__content{
     padding: 2rem 0;
@@ -844,6 +872,12 @@ $tipo__textos: 'Roboto', sans-serif;
     &__p {
       @include parrafo($tipo__textos, var(--size-sm), 400, $white);
       margin-top: 2rem;
+    }
+    &__columns {
+      @include flex(flex, row, wrap, space-between, center);
+      @include media(991px){
+        margin-top: 2rem;
+      }
     }
     &__column {
       width: 30%;
@@ -893,6 +927,10 @@ $tipo__textos: 'Roboto', sans-serif;
   height: 10rem;
   background: url('../img/semi-circle-left.jpg') no-repeat center center;
   background-size:contain;
+  @include media(720px){
+    background: url('../img/semi-circle-right.jpg') no-repeat center center;
+    background-size:contain;
+  }
 }
 .sectionline-right{
   width: 100%;
