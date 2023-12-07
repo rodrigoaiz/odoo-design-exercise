@@ -27,6 +27,9 @@ $tipo__textos: 'Roboto', sans-serif;
 .navbar{
   background-color: $blue;
   padding-top: 2rem;
+  @include media(400px){
+    padding-top: 0.5rem;
+  }
   &-collapse{
     @include mediadelante(992px){
       flex-grow: 0;
@@ -42,11 +45,13 @@ $tipo__textos: 'Roboto', sans-serif;
     }
   }
   &__login{
+
     @include flex(flex, row, wrap, center, space-around);
     @include media(992px){
-      @include flex(flex, row, wrap, center, center);
+      @include flex(flex, row, wrap, start, center);
       width: 100%;
       flex-grow: 1;
+      margin-top: 0.5rem;
     }
     &__button{
       background-color: $white;
@@ -54,6 +59,9 @@ $tipo__textos: 'Roboto', sans-serif;
       padding: 0 1rem;
       i{
         margin-right: 1rem;
+        @include media(400px){
+          display: none;
+        }
       }
       &:hover{
         background-color: $yellow;
@@ -103,6 +111,9 @@ $tipo__textos: 'Roboto', sans-serif;
 
   background-color: $blue;
   height: 95svh;
+  @include media(400px){
+    height: auto
+  }
   @include flex(flex, row, wrap, center, center);
   width: 100%;
   color:$white;
