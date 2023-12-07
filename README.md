@@ -7,24 +7,24 @@ For installation:
 - Run the following command
 
 ```bash
-$ npm install
+ npm install
 ```
 
 - For development environment run
 ```bash
-$ npm start
+ npm start
 ```
 
 or
 
 ```bash
-$ npm run dev
+ npm run dev
 ```
 
 - For production environment
 
 ```bash
-$ npm run build
+ npm run build
 ```
 
 ## Documentation
